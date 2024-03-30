@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Angkor&family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="loading">
+        <div>
+            <img src="./img/loading.png" class="loadingimg">
+            <p class="text_3">Please Wait</p>
+        </div>
+    </div>
+    <div class="graphpage">
+        <img src="./img/close.png" class="close">
+        <div class="g">
+            <img class="graph" src="#">
+            <button onclick="graphdownload()">Download</button>
+        </div>
+    </div>
+    <div class="leftdiv">
+        <div class="container_1">
+            <div class="container_1_1">
+                <p class="text1">Provide Your Data</p>
+                <div>
+                    <label for="sample">No of sample (K)</label>
+                    <input name="sample" type="number" class="sample" placeholder="Enter Total No of Samples">
+                </div>
+                <div>
+                    <label for="total">Total Product (N)</label>
+                    <input type="number" name="total" class="total" placeholder="Enter Total No of Products">
+                </div>
+                
+                <button onclick="Calculate()">Calculate</button>
+            </div>
+            <hr>
+            <p class="text2">Results</p>
+            <div class="tempflex">
+                <img class="pimg" src="./img/sump.png"><span>= </span>
+                <p class="pval"></p>
+            </div>
+            <div class="container_1_2">
+                <div>
+                    <img class="lclimg" src="./img/lcl.png"><span> = </span>
+                    <p class="lclval"></p>
+                </div>
+                <div>
+                    <img class="uclimg" src="./img/ucl.png"><span>= </span>
+                    <p class="uclval"></p>
+                </div>
+                
+                
+            </div>
+            <button onclick="showgraph()" disabled class="graphshowbutton">Show Graph</button>
+
+           
+        </div>
+        
+    </div>
+
+    <div class="container_2">
+        <table>
+            <thead>
+                <th class="head1">No of Samples</th>
+                <th class="head2">Proportion</th>
+            </thead>
+            <tbody class="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="script.js"></script>
+    
+</body>
+<footer>
+</footer>
+</html>
