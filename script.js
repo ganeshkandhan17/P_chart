@@ -58,6 +58,7 @@ function Calculate(){
             alert("Enter all Values");
         }
         else if(tempsum==length){
+            document.querySelector(".loading").classList.toggle("active");
             graph()
         }
     }
